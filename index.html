@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix media center</title>
+</head>
+
+<body class="bg-black">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./Netflix-Logo.svg" alt="" width="100px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- breadcrumb -->
+                <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    </ol>
+                </nav>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light fw-bold text-shadow" aria-current="page" href="#">Media Center</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light fw-bold text-shadow" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light fw-bold text-shadow" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Indonesia
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light fw-bold text-shadow" href="#">NewsRoom</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light fw-bold text-shadow" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <!-- DOM mouse over -->
+                        <h5>And more...</h5>
+                        <script>
+                            let h5 = document.getElementsByTagName("h5")[0];
+                            h5.onmouseover = () => {
+                                alert("Login First");
+                            }
+                        </script>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-danger"
+                                data-bs-toggle="modal" data-bs-target="#modalSignIn">Login</button></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex align-items-center justify-content-center flex-column search-wrapper my-5">
+        <h1 class="text-center text-light fw-bold text-shadow">Discover stories to share <br> with Indonesian.</h1>
+        <div class="search-container d-flex align-items-center justify-content-center">
+            <input type="text" name="search" placeholder="Search..." class="search-input">
+            <a href="#" class="search-btn">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <ul class="list-inline ms-5">
+            <li class="list-unstyled list-inline-item">
+                <h1 class="text-light fw-bold fs-4 text-shadow">I'm interested in covering titles releasing in</h1>
+            </li>
+            <li class="text-light list-unstyled list-inline-item">
+                <div class="dropdown">
+                    <button class="btn btn-black dropdown-toggle text-light text-shadow" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        September
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">January</a></li>
+                        <li><a class="dropdown-item" href="#">February</a></li>
+                        <li><a class="dropdown-item" href="#">March</a></li>
+                        <li><a class="dropdown-item" href="#">April</a></li>
+                        <li><a class="dropdown-item" href="#">May</a></li>
+                        <li><a class="dropdown-item" href="#">June</a></li>
+                        <li><a class="dropdown-item" href="#">July</a></li>
+                        <li><a class="dropdown-item" href="#">August</a></li>
+                        <li><a class="dropdown-item" href="#">September</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="list-inline ms-5">
+            <!-- button -->
+            <li button type="button" class="btn btn-secondary"></i>Movies</button></li>
+            <li button type="button" class="btn btn-secondary"><i class="fas fa-tape"></i> Tv Shows</button></li>
+            <li button type="button" class="btn btn-secondary"><i class="fas fa-file-video"></i> New & Popular</button>
+            </li>
+            <li button type="button" class="btn btn-secondary"><i class="fas fa-child"></i> Kids</button></li>
+            <li button type="button" class="btn btn-secondary"><i class="fas fa-video"></i> Reality</button></li>
+            <li button type="button" class="btn btn-secondary"><i class="fas fa-video"></i> Reality</button>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4">
+            <!-- card -->
+            <div class="card">
+                <img src="./2.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Seoul Vibe</h5>
+                    <p class="card-text">
+                        The drivers of the Sanggye-dong Supreme Team become mired in the slush fund investigation of a
+                        powerful person on the very day of the 1988 Seoul Olympics opening ceremony.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#target1">Link
+                        Movie</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="target1" role="dialog" arialabelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"> <a href="https://www.netflix.com/title/81437344">Click Me
+                                            :-)</a></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+            <div class="card">
+                <img src="./3.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Night in Paradise</h5>
+                    <p class="card-text">
+                        Hiding out in Jeju Island following a brutal tragedy, a wronged mobster with a target on his
+                        back connects with a woman who has her own demons. Hiding out in Jeju Island following a brutal
+                        tragedy.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#target2">Link
+                        Movie</button>
+
+                    <div class="modal fade" id="target2" role="dialog" arialabelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"> <a href="https://www.netflix.com/title/81342504">Click Me
+                                            :-)</a></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+            <div class="card">
+                <img src="./4.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">My Name</h5>
+                    <p class="card-text">
+                        Following her father's murder, a revenge-driven woman (Han So-hee) puts her trust in a powerful
+                        crime boss and enters the police force under his direction. The series revolves around a woman
+                        who joins a gang.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#target3">Link
+                        Movie</button>
+
+                    <div class="modal fade" id="target3" role="dialog" arialabelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"> <a href="https://www.netflix.com/title/81011211">Click Me
+                                            :-)</a></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+            <div class="card">
+                <img src="./5.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Carter</h5>
+                    <p class="card-text">
+                        Thrown straight into a dangerous mission with none of his memories intact, a man must escape
+                        death while trying to figure out who he is, how he ended up here, and who is the mysterious
+                        voice in his ear calling him "Carter"?
+                    </p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#target4">Link
+                        Movie</button>
+
+                    <div class="modal fade" id="target4" role="dialog" arialabelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"> <a href="https://www.netflix.com/title/81399639">Click Me
+                                            :-)</a></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="vh-50 image">
+            <div class="container my-5">
+                <div class="float-end mt-6">
+                    <h1 class="text-light fw-bold text-shadow">Looking for company assets?</h1>
+                    <p class="text-light text-shadow">Get more images and information about Netflix on our company site.
+                    </p>
+                    <button type="button" class="btn btn-outline-secondary">Go to about Netflix</button>
+                    <script>
+                        // DOM Onclick 
+                        let button = document.createElement("button");
+                        button.innerHTML = "Log out";
+                        button.onclick = () => { alert('Logout Berhasil') };
+                        document.body.appendChild(button)
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 col-sm-4">
+                <ul>
+                    <li class="list-unstyled text-light fs-11 text-shadow">Company</li>
+                    <li class="list-unstyled text-light text-shadow">About Netflix</li>
+                    <li class="list-unstyled text-light text-shadow">Newsroom</li>
+                    <li class="list-unstyled text-light text-shadow">Company Assets</li>
+                    <li class="list-unstyled text-light text-shadow">Start Watching</li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-4">
+                <ul>
+                    <li class="list-unstyled text-light fs-11 text-shadow">connect</li>
+                    <li class="list-unstyled text-light text-shadow">Contact Us</li>
+                    <!-- DOM onmouseout -->
+                    <h6>Mail Us</h6>
+                        <script>
+                            let h6 = document.getElementsByTagName("h6")[0];
+                            h6.onmouseout = () => {
+                                alert("Emailnetflix@123123.com");
+                            }
+                        </script>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-sm-4">
+                <ul>
+                    <li class="list-unstyled text-light fs-11 text-shadow">Legal</li>
+                    <li class="list-unstyled text-light text-shadow">Terms and Conditions</li>
+                    <li class="list-unstyled text-light text-shadow">Privacy</li>
+                    <li class="list-unstyled text-light text-shadow">Cookies & Preference</li>
+
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="./main.js"></script>
+        <script src="./index.js"></script>
+
+        <!-- modal -->
+        <div class="modal fade" id="modalSignIn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="btn-close btn_close_clean" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+
+                    <div class="container-fluid container_signin">
+                        <div>
+                            <div class="signin_text">Sign in</div>
+                            <div>
+                                <input type="email" class="form-control input_style"
+                                    placeholder="Enter phone number or email address" />
+                            </div>
+                            <div class="form-check form-switch form_center">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckDefault" />
+                                <label class="form-check-label keepsignin_text" for="flexSwitchCheckDefault">Keep me
+                                    signed in</label>
+                            </div>
+                            <div>
+                                <button class="btn btn-secondary btn-lg button_width_100" id="liveAlertBtn"
+                                    onclick="handleClickSignin()">
+                                    Sign in
+                                </button>
+                            </div>
+                        </div>
+                        <div class="signup_text">Sign Up</div>
+                        <div class="or_text">or</div>
+                        <div>
+                            <button class="btn btn-light btn-lg button_width_100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-google" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                                </svg>
+                                Continue with Google
+                            </button>
+                            <button class="btn btn-light btn-lg button_width_100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                                Continue with Facebook
+                            </button>
+                            <button class="btn btn-light btn-lg button_width_100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-apple" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                                    <path
+                                        d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                                </svg>
+
+                                Continue with Apple
+                            </button>
+                        </div>
+                        <div id="liveAlertPlaceholder" style="margin-top: 12px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // named function
+    function showAlert1() {
+        //isi di sini
+    }
+
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+
+    // Anonymous function / arrow function
+    const showAlert = (message, type) => {
+        //isi di sini
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = `
+      <div class="alert alert-${type}" role="alert" >
+       ${message}
+      </div>
+      `;
+
+        alertPlaceholder.append(wrapper);
+    };
+
+    const handleClickSignin = () => {
+        showAlert('berhasil sign in', 'success');
+    };
+</script>
+
+</html>
